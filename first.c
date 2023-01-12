@@ -70,14 +70,10 @@ int main(int argc, char *argv[]) {
 	volumeFactor = 0.5;
 
 	printf("Number of samples from sound file: %d\n", numSamples);
-//	printf("Number of times to run adjustVolume: %d\n", numSamples*100);
 	t = clock();	
-//	for (j=0; j<100; j++) {
 	for (i=0; i<numSamples; i++) {
 		samples[i] = adjustVolume(samples[i], volumeFactor);
-//		samples[i] = adjustVolume2(samples[i], volumeFactor);
 	}
-//	}
 	t = clock() - t;
 
 	printf("%d cycles (%f seconds)\n", t, (float)t/CLOCKS_PER_SEC);
